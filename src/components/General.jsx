@@ -1,52 +1,11 @@
-import { useState } from 'react';
 import './styles/Section.css';
 import FormGroup from './FormGroup';
 
-const General = () => {
-  const [form, setForm] = useState({ fullName: '', email: '', phone: '', city: '' });
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [city, setCity] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setForm({
-      fullName: fullName,
-      email: email,
-      phone: phone,
-      city: city,
-    });
-    setFullName('');
-    setEmail('');
-    setPhone('');
-    setCity('');
-  };
-
-  const handleChange = (e) => {
-    console.log(e.target.id);
-    switch (e.target.id) {
-      case 'fullName':
-        setFullName(e.target.value);
-        break;
-      case 'email':
-        setEmail(e.target.value);
-        break;
-      case 'phone':
-        setPhone(e.target.value);
-        break;
-      case 'city':
-        setCity(e.target.value);
-        break;
-    }
-  };
-
-  console.log(form);
-
+const General = ({ form, handleChange, handleSubmit, fullName, email, phone, city }) => {
   return (
     <div className="section">
       <h1>General information</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="general">
         <FormGroup
           value={fullName}
           name={'Full name'}
