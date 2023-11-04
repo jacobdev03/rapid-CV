@@ -1,0 +1,36 @@
+.app {
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.cv-placeholder {
+  padding: 10px;
+  height: 900px;
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+}
+
+.section {
+  width: 100%;
+  max-width: 700px;
+}
+
+.infoContainer {
+  width: 100%;
+  max-width: 700px;
+}
+
+.cv-section {
+  margin: 0 50px;
+}
+
+.cv-section h3 h1 {
+  border-bottom: 1px solid black;
+}
+
+.general {
+  margin-bottom: 3rem;
+}
